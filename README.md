@@ -100,6 +100,64 @@ $  echo
 $ aws ec2 request-spot-instances --spot-price "0.010" --instance-count 1 --type "one-time" --launch-specification file://ec2-spot.json
 ```
 
+## List spor request instances
+
+```sh
+aws ec2 describe-spot-instance-requests
+
+OUTPUT
+
+{
+    "SpotInstanceRequests": [
+        {
+            "Status": {
+                "UpdateTime": "2012-05-14T01:27:02.000Z",
+                "Code": "price-too-low",
+                "Message": "Your Spot request price of 0.01 is lower than the minimum required Spot request fulfillment price of 0.0112."
+            },
+            "ProductDescription": "Linux/UNIX",
+            "SpotInstanceRequestId": "sir-dfdf56564fsk",
+            "State": "open",
+            "LaunchSpecification": {
+                "Placement": {
+                    "AvailabilityZone": "us-east-1b"
+                },
+                "ImageId": "ami-80861296",
+                "SecurityGroups": [
+                    {
+                        "GroupName": "launch-wizard-1",
+                        "GroupId": "sg-09523477"
+                    }
+                ],
+                "SubnetId": "subnet-d232352dfdf",
+                "Monitoring": {
+                    "Enabled": false
+                },
+                "IamInstanceProfile": {
+                    "Arn": "arn:aws:iam::3454354564545:instance-profile/learn"
+                },
+                "InstanceType": "m3.medium"
+            },
+            "Type": "one-time",
+            "CreateTime": "2012-05-14T01:26:57.000Z",
+            "SpotPrice": "0.010000"
+        }
+```
+## Cancel spot request instance
+
+```sh
+$ aws ec2 cancel-spot-instance-requests --spot-instance-request-ids sir-ddkjk8787
+
+OUTPUT
+{
+    "CancelledSpotInstanceRequests": [
+        {
+            "State": "cancelled",
+            "SpotInstanceRequestId": "sir-ddkjk8787"
+        }
+    ]
+}
+```
 # Automations next steps...
 
 ## Ansible
