@@ -67,7 +67,7 @@ aws ec2 describe-subnets
 ### List images
 
 ```sh
-aws ec2 describe-images --owners amazon --filters "Name=platform,Values=linux""
+aws ec2 describe-images --filters Name=tag-key,Values=Custom Name=tag-value,Values=Linux1,Ubuntu1 --query 'Images[*].{ID:ImageId}'
 ```
 
 ### List keys
