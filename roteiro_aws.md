@@ -61,3 +61,36 @@ Output
 ```sh
 aws ec2 describe-subnets
 ```
+
+## Lounch instance
+
+### List images
+
+```sh
+aws ec2 describe-images --owners amazon --filters "Name=platform,Values=linux""
+```
+
+### List keys
+
+```sh
+aws ec2 describe-key-pairs
+```
+
+### List securioty groups
+
+```sh
+aws ec2 describe-security-groups
+```
+
+### List subnets
+
+```sh
+aws ec2 describe-subnets
+```
+
+### Deploy instances
+
+```sh
+aws ec2 run-instances --image-id <IMAGE ID> --count 1 --instance-type t2.micro --key-name <MINHA CHAVE> --security-group-ids <SECURITY GROUP ID> --subnet-id <SUBNETID>
+
+```
