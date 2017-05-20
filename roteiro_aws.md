@@ -32,5 +32,5 @@ Output
 ## Subnets
 
 ```sh
-aws ec2 create-subnet --vpc-id vpc-a01106c2 --cidr-block 10.0.1.0/24
+aws ec2 create-subnet --vpc-id vpc-286b9151 --cidr-block 10.0.1.0/24
 ```
