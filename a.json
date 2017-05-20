@@ -1,0 +1,6 @@
+{
+  "ImageId": "ami-80861296",
+  "SecurityGroupIds": [ "sg-09523477" ],
+  "InstanceType": "m3.medium",
+  "SubnetId": "subnet-1db00c55"
+}
