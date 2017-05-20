@@ -34,3 +34,24 @@ Output
 ```sh
 aws ec2 create-subnet --vpc-id vpc-286b9151 --cidr-block 10.0.1.0/24
 ```
+
+Output
+
+```sh
+
+{
+    "Subnet": {
+        "VpcId": "vpc-286b9151",
+        "AvailableIpAddressCount": 251,
+        "MapPublicIpOnLaunch": false,
+        "DefaultForAz": false,
+        "Ipv6CidrBlockAssociationSet": [],
+        "State": "pending",
+        "AvailabilityZone": "us-east-1b",
+        "SubnetId": "subnet-c6c0478e",
+        "CidrBlock": "10.0.1.0/24",
+        "AssignIpv6AddressOnCreation": false
+    }
+}
+
+```
