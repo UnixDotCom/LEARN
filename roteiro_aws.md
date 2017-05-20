@@ -12,4 +12,21 @@ VPC
 aws ec2 create-vpc --cidr-block 10.0.0.0/16
 ```
 
+Output
+
+```sh
+{
+    "Vpc": {
+        "VpcId": "vpc-286b9151",
+        "InstanceTenancy": "default",
+        "Tags": [],
+        "Ipv6CidrBlockAssociationSet": [],
+        "State": "pending",
+        "DhcpOptionsId": "dopt-646cb802",
+        "CidrBlock": "10.0.0.0/16",
+        "IsDefault": false
+    }
+}
+```
+
 ## Subnets
