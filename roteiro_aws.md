@@ -55,3 +55,9 @@ Output
 }
 
 ```
+
+## List Subnets
+
+```sh
+aws ec2 describe-subnets
+```
